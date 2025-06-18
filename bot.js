@@ -1,16 +1,10 @@
 
-require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const schedule = require('node-schedule');
 const fs = require('fs');
 
-const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const ADMIN_ID = Number(process.env.ADMIN_ID);
-
-if (!TOKEN || !ADMIN_ID) {
-  console.error('Не заданы TELEGRAM_BOT_TOKEN или ADMIN_ID в .env файле');
-  process.exit(1);
-}
+const TOKEN = 7654397697:AAFQcNyz--NU_l3PJ_VQVYkUwgh7T_k1Yec;// Вставьте сюда ваш токен
+const ADMIN_ID = 7794270699; // Вставьте сюда ваш админ ID числом
 
 const SETTINGS_FILE = './settings.json';
 
