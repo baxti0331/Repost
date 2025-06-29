@@ -13,7 +13,7 @@ class Database:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 user_id INTEGER NOT NULL,
                 message TEXT NOT NULL,
-                channels TEXT NOT NULL, -- JSON строка с ID каналов
+                channels TEXT NOT NULL,
                 schedule_time TEXT NOT NULL
             )
         ''')
@@ -58,4 +58,4 @@ class Database:
         rows = cursor.fetchall()
         return {channel_id: {"title": title} for channel_id, title in rows}
 
-    # Пример методов для добавления и удаления каналов, постов можно добавить по необходимости
+    # Добавь остальные методы по необходимости (добавить/удалить канал, создать пост)
