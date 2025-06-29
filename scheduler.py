@@ -1,19 +1,15 @@
 import time
 import logging
-from datetime import datetime
-from bot import TelegramBot
 from database import Database
 from telebot import TeleBot
-from config import SCHEDULER_CHECK_INTERVAL
+from config import TELEGRAM_API_TOKEN, SCHEDULER_CHECK_INTERVAL
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def run_scheduler():
-    api_token = os.getenv("TELEGRAM_API_TOKEN")
-    bot_api = TeleBot(api_token)
+    bot_api = TeleBot(TELEGRAM_API_TOKEN)
     db = Database()
-    telegram_bot = TelegramBot(bot=bot_api, db=db)
 
     while True:
         try:
