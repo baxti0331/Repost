@@ -1,6 +1,4 @@
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
-from typing import Dict, List
-from config import BUTTONS  # Предполагается, что у тебя есть словарь с текстами кнопок
 
 class Keyboards:
     @staticmethod
@@ -14,5 +12,3 @@ class Keyboards:
             [InlineKeyboardButton("🗑 Удалить канал/группу", callback_data="remove_channel")]
         ]
         return InlineKeyboardMarkup(keyboard)
-
-    # ... остальной код клавиатур из твоего примера
