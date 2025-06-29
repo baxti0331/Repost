@@ -1,9 +1,2 @@
-{
-  "version": 2,
-  "builds": [
-    { "src": "api/webhook.py", "use": "@vercel/python" }
-  ],
-  "routes": [
-    { "src": "/webhook", "dest": "api/webhook.py" }
-  ]
-}
+web: python webhook.py
+worker: python scheduler.py
