@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CallbackQueryHandler, CommandHandle
 import sympy
 import os
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+TOKEN = os.environ.get("TOKEN")
 
 user_data = {}
 
